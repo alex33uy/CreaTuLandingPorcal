@@ -1,45 +1,34 @@
-.itemcount {
+.detail-container {
+  max-width: 1000px;
+  margin: 40px auto;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 180px;
+  gap: 40px;
+  padding: 20px;
 }
 
-.itemcount-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.detail-container img {
+  width: 400px;
+  object-fit: contain;
 }
 
-.itemcount-controls button {
-  width: 40px;
-  height: 40px;
-  font-size: 18px;
-  cursor: pointer;
+.detail-info {
+  flex: 1;
 }
 
-.itemcount-controls span {
-  font-size: 18px;
+.price {
+  font-size: 1.5rem;
   font-weight: bold;
+  margin: 15px 0;
 }
 
-.itemcount-add {
-  padding: 10px;
-  background-color: #111;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
 
-.itemcount-add:disabled {
-  background-color: #aaa;
-  cursor: not-allowed;
-}
+@media (max-width: 768px) {
+  .detail-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.itemcount-go {
-  padding: 10px;
-  background-color: green;
-  color: white;
-  border: none;
-  cursor: pointer;
+  .detail-container img {
+    width: 100%;
+  }
 }
